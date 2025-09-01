@@ -1,0 +1,14 @@
+<h3>{{ data | json }}</h3>
+<br />
+<br />
+<input type="text" [(ngModel)]="details.id" />
+<br />
+<input type="text" [(ngModel)]="details.name" />
+<br />
+<button (click)="addDataFun()">add data</button>
+<hr />
+<button (click)="readDataWithIdFun()">print data with id</button>
+<hr />
+<button (click)="updateDataWithIdFun()">update data with id</button>
+<hr />
+<button (click)="deleteDataWithIdFun()">delete data of id</button>

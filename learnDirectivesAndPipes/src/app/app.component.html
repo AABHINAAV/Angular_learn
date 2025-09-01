@@ -1,0 +1,24 @@
+<button appAttributeDirective>attribute directive</button>
+<br>
+<br>
+<button appHostlistenerDirective>host listener directive</button>
+<br>
+<br>
+<input type="text" [(ngModel)]="color">
+<br>
+<button appValueDirective [buttonColor]='color'>value directive</button>
+<br>
+<br><br><br>
+<hr><hr>
+{{ 66600 | currency }}<br>
+{{ 66600 | currency : 'CAD' }}<br>
+{{ 66600 | currency :'INR' }}<br>
+{{ 66600 | currency :'INR' :'code' }}<br>
+{{ 66600 | currency :'INR' :'symbol' }}<br>
+{{ 66600 | currency :'INR' :'myOwnString' }}<br>
+<br>
+<br>
+<br>
+<h3>{{"Shazam" | custompipe : 'M'}}</h3>
+<h3>{{"Wonder Women" | custompipe : 'G'}}</h3>
+<h3>{{"Louise Laine Kent" | custompipe : "F"}}</h3>

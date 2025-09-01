@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <!--  -->
+    <!--  -->
+    <form [formGroup]="loginform" (ngSubmit)="login()">
+      <!--  -->
+      <!--  -->
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          placeholder="Enter you email"
+          required
+          formControlName="email"
+        />
+      </div>
+      <!--  -->
+      <div
+        *ngIf="
+          loginform.controls['email'].invalid &&
+          loginform.controls['email'].touched
+        "
+        class="text-danger"
+      >
+        EMAIL SHOULD BE CORRECT
+      </div>
+      <!--  -->
+      <div
+        *ngIf="loginform.controls['email'].hasError('required')"
+        class="text-danger"
+      >
+        EMAIL IS REQUIRED
+      </div>
+      <!--  -->
+      <!--  -->
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="password"
+          placeholder="Enter your password"
+          required
+          formControlName="password"
+        />
+      </div>
+      <!--  -->
+      <div
+        *ngIf="
+          loginform.controls['password'].invalid &&
+          loginform.controls['password'].touched
+        "
+        class="text-danger"
+      >
+        PASSWORD SHOULD OF ATLEAST 8 CHARACTERS
+      </div>
+      <!--  -->
+      <div
+        *ngIf="loginform.controls['password'].hasError('required')"
+        class="text-danger"
+      >
+        PASSWORD IS REQUIRED
+      </div>
+      <!--  -->
+      <button type="submit" [disabled]="loginform.invalid">Log In</button>
+      <!--  -->
+      <!--  -->
+    </form>
+  </div>
+</div>
